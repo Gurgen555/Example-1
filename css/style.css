@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background-color: #eee;
+}
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: #282828;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 25px -10px #ccc;
+}
+nav h1{
+    color: #eee;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+.card-wrapper{
+    position: relative;
+}
+#cardBtn{
+    color: #eee;
+    text-decoration: none;
+    font-size: 20px;
+}
+#card{
+    width: 300px;
+    max-height: 300px;
+    overflow-x: auto;
+    position: absolute;
+    top: 80px;
+    left: -300px;
+    background-color: #eee;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ccc;
+    opacity: 0;
+    z-index: 2;
+    visibility: hidden;
+    transition: .3s;
+    padding: 20px;
+}
+.show-card{
+    opacity: 1 !important;
+    top: 60px !important;
+    visibility: visible !important;
+}
+.section-title{
+    font-size: 25px;
+    color: #282828;
+    text-align: center;
+    margin: 30px 0;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+.items{
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.item{
+    width: 280px;
+    height: 420px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow:hidden;
+    position: relative;
+    box-shadow: 0 0 15px #ccc;
+}
+.item-img{
+    width: 280px;
+    height: 280px;
+}
+.item-img img{
+    max-width: 100%;
+}
+.item-info{
+    padding: 10px;
+}
+.item-info h3{
+    text-align: center;
+    margin: 15px 0;
+}
+.add{
+    text-decoration: none;
+    color: #eee;
+    background-color: #282828;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    width: 70%;
+    text-align: center;
+    margin: 10px auto;
+    transition: .3s;
+    display: block;
+}
+.add:hover{
+    background-color: #000;
+}
+.item-price{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #eee;
+    padding: 5px 10px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+}
+
+.card-item{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    border: 1px solid;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-item-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.card-item-img img{
+    max-width: 100%;
+}
+.card-item p {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+#carDelete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: red;
+}
+
+#carCount{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.changeCount{
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+ 
+}
+
+.changeCount i {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.changeCount i:active{
+    font-size: 17px;
+}
